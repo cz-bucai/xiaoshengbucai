@@ -7,4 +7,8 @@ export default {
      get_RoleList(state){
         return state.roleList
     },
+    //返回管理员
+    get_UserList(state){
+        return state.userList
+    }
 }

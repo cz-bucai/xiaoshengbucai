@@ -36,7 +36,7 @@ export default {
   methods: {
     //封装获取角色列表
     ...mapActions(['getRoleListAction']),
-     updated(id) {
+     update(id) {
        this.$emit('update',{
          id,
          isAdd:false

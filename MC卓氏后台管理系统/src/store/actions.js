@@ -1,5 +1,5 @@
 //引入数据接口
-import {getMenuList,getRoleList} from '../util/axios'
+import {getMenuList,getRoleList,getUserList} from '../util/axios'
 
 export default {
     //封装获取菜单列表
@@ -22,4 +22,13 @@ export default {
         }
       })
     },
+    //封装获取管理员列表
+    getUserListAction({commit},pageInfo){
+      getUserList(pageInfo)
+      .then(res=>{
+        if(res.code===200){
+          commit('REQ_USERLIST',res.list)
+        }
+      })
+    }
 }
