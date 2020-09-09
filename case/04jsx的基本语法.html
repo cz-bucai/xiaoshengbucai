@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/react.js"></script>
+    <script src="./js/react-dom.js"></script>
+    <script src="./js/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+    let str = '西安冲冲冲'
+    let num = 888
+    let falg = true
+    let img = 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1819503106,1702629773&fm=26&gp=0.jpg'
+    let url = 'https://www.baidu.com/'
+    let obj = {
+        name:'李白',
+        age:188
+    }
+    let eatArr = ['喜洋洋','烤全羊','红烧羊']
+    let el = (
+        <div>
+            <h1>{str}</h1>
+            <h1>{num}</h1>
+            <h1>{falg?'冲冲冲':'不冲'}</h1>
+            <img src={img} />
+            <a href={url}>去冲冲冲</a>
+            <h1>姓名：{obj.name}</h1>
+            <h1>姓名：{obj.age}</h1>
+            <ul>
+                {
+                    eatArr.map(item=>{
+                        return<li key={item}>{item}</li>
+                    })
+                }
+            </ul>
+        </div>
+    )
+    let app = document.getElementById('app')
+    ReactDOM.render(el,app)
+    </script>
+</body>
+</html>
